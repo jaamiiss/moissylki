@@ -36,9 +36,6 @@ export default function Home() {
                 priority
               />
             </a>
-            <p>
-              Link Tree
-            </p>
           </div>
         </div>
 
@@ -60,6 +57,9 @@ export default function Home() {
               priority
             />
           </div>
+        </div>
+        <div>
+            <p>Link Tree</p>
         </div>
 
         <div className={styles.grid}>
