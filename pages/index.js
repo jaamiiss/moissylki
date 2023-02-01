@@ -36,6 +36,9 @@ export default function Home() {
                 priority
               />
             </a>
+            <p>
+              Link Tree
+            </p>
           </div>
         </div>
 
