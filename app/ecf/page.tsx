@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import data from '../data.json';
 import '@/styles/globals.css';
+import { get } from '@vercel/edge-config';
+
 
 function LinkCard({ href, title, image }: {
   href: string;
@@ -58,7 +59,9 @@ function Socials({ href, title, image }: {
   )
 }
 
-export default function Home() {
+export default async function Home() {
+  const data = await get('mylinks');
+
   return (
     <div className='flex items-center flex-col mx-auto w-full justify-center mt-16 px-8'>
       <Image 
@@ -69,10 +72,10 @@ export default function Home() {
         height={120}
       />
       <h1 className='font-bold mt-4 mb-8 text-xl'>{data.name}</h1>
-      {data.links.map((link) => (
+      {data.links.map((link: JSX.IntrinsicAttributes & { href: string; title: string; image?: string | undefined; }) => (
         <LinkCard key={link.href} {...link} />
       ))}
-      {data.socials.map((link) => (
+      {data.socials.map((link: JSX.IntrinsicAttributes & { href: string; title: string; image?: string | undefined; }) => (
         <Socials key={link.href} {...link} />
       ))}
     </div>
