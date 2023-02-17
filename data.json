@@ -1,0 +1,45 @@
+{
+    "name": "James Magallanes",
+    "avatar": "http://source.unsplash.com/featured/120x120",
+        "links": [
+            {
+                "title": "My Personal Site",
+                "href": "#",
+                "image": "https://cdn.cdnlogo.com/logos/a/40/adobe-portfolio.svg",
+                "description": ""
+            },
+            {
+                "title": "Webflow",
+                "href": "https://webflow.com/@magallanesjamis",
+                "image": "https://cdn.cdnlogo.com/logos/w/1/webflow.svg",
+                "description": ""
+            },
+            {
+                "title": "Buy Me A Coffee",
+                "href": "https://www.buymeacoffee.com/jaamiiss",
+                "image": "https://cdn.cdnlogo.com/logos/c/79/coffeescript.svg",
+                "description": ""
+            },
+            {
+                "title": "Vercel",
+                "href": "https://https://vercel.com/",
+                "image": "",
+                "description": ""
+            },
+            {
+                "title": "Next.js",
+                "href": "https://nextjs.org/",
+                "image": "",
+                "description": ""
+            }
+        ],
+        "socials": [
+            {
+                "title": "Github",
+                "href": "https://github.com/jaamiiss/",
+                "image": "https://cdn.cdnlogo.com/logos/g/69/github-icon.svg",
+                "description": ""
+            }
+        ]
+}
+
