@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import '@/styles/globals.css';
 import { get } from '@vercel/edge-config';
+import { redirect } from 'next/navigation';
 
-
+export const dynamic = 'force-dynamic',
+  runtime = 'edge';
+  
 function LinkCard({ href, title, image }: {
   href: string;
   title: string;
@@ -59,8 +62,33 @@ function Socials({ href, title, image }: {
   )
 }
 
+interface Data {
+  name: string;
+  avatar: string;
+  links: Link[];
+  socials: Social[];
+}
+
+interface Link {
+  href: string;
+  title: string;
+  image?: string;
+}
+
+interface Social {
+  href: string;
+  title: string;
+  image?: string;
+}
+
+
 export default async function Home() {
-  const data = await get('mylinks');
+  const data: Data | undefined = await get('mylinks');
+
+  if (!data) {
+    // redirect to local data
+    redirect('https://moissylki.vercel.app/');
+  }
 
   return (
     <div className='flex items-center flex-col mx-auto w-full justify-center mt-16 px-8'>
@@ -72,10 +100,10 @@ export default async function Home() {
         height={120}
       />
       <h1 className='font-bold mt-4 mb-8 text-xl'>{data.name}</h1>
-      {data.links.map((link: JSX.IntrinsicAttributes & { href: string; title: string; image?: string | undefined; }) => (
+      {data.links.map((link) => (
         <LinkCard key={link.href} {...link} />
       ))}
-      {data.socials.map((link: JSX.IntrinsicAttributes & { href: string; title: string; image?: string | undefined; }) => (
+      {data.socials.map((link) => (
         <Socials key={link.href} {...link} />
       ))}
     </div>
