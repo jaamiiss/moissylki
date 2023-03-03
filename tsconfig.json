@@ -35,7 +35,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "app/head.tsx.bk"  ],
   "exclude": [
     "node_modules"
   ]
