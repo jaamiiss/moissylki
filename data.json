@@ -25,6 +25,12 @@
                 "href": "https://ko-fi.com/jaamiiss",
                 "image": "",
                 "description": ""
+            },                    
+            {
+                "title": "Assistant Pro",
+                "href": "https://app.assistant.pro/?via=james",
+                "image": "",
+                "description": ""
             },
             {
                 "title": "Vercel",
@@ -44,6 +50,12 @@
                 "title": "Github",
                 "href": "https://github.com/jaamiiss/",
                 "image": "https://cdn.cdnlogo.com/logos/g/69/github-icon.svg",
+                "description": ""
+            },
+            {
+                "title": "Dribbble",
+                "href": "https://dribbble.com/jaamiiss",
+                "image": "https://www.cdnlogo.com/logos/d/4/dribbble-icon.svg",
                 "description": ""
             }
         ]
