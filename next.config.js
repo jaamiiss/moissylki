@@ -1,12 +1,10 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
   images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
-  }
+    domains: ['images.unsplash.com', 'source.unsplash.com', 'cdn.cdnlogo.com', 'www.cdnlogo.com'],
+  },
+  outputFileTracingRoot: __dirname,
 }
 
 module.exports = nextConfig
