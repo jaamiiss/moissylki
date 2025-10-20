@@ -1,6 +1,6 @@
 {
     "name": "James Magallanes",
-    "avatar": "http://source.unsplash.com/featured/120x120",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face&auto=format&q=80",
         "links": [
             {
                 "title": "My Personal Site",
@@ -34,7 +34,7 @@
             },
             {
                 "title": "Vercel",
-                "href": "https://https://vercel.com/",
+                "href": "https://vercel.com/",
                 "image": "",
                 "description": ""
             },
